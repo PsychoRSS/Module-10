@@ -106,7 +106,7 @@ const generate = ({name,job,email}) =>
                           <p>email: <span>${email}</span></p>
                       </section>
                       <section class="bg-slate-100">
-                          <p>office number:
+                          <p>office number:</p>
                       </section>
                   </div>
               </div>
@@ -139,6 +139,11 @@ const generate = ({name,job,email}) =>
 
 inquirer
   .prompt([
+    {
+      choices:[],
+        name: 'name',
+        message: 'What is your name?',
+      },
     {
       type: 'input',
       name: 'name',
