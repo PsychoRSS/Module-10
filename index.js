@@ -106,12 +106,12 @@ const generate = ({name,job,email}) =>
                           <p>email: <span>${email}</span></p>
                       </section>
                       <section class="bg-slate-100">
-                          <p>office number:</p>
+                          <p>office number:
                       </section>
                   </div>
               </div>
           </div>
-
+        
           <div id="complete card" class="h-60 w-60 bg-slate-300 rounded-lg font-bold">
               <div id="card header" class="h-16 w-60 bg-sky-600 text-white">    
               <h2 class="ml-4">${name}</h2>
