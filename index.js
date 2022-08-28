@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Char = require('./lib/character');
+
+const Char = require('./lib/Manager');
 
 
 const generate = ({name,job,email}) =>
@@ -140,80 +141,14 @@ const generate = ({name,job,email}) =>
 inquirer
   .prompt([
     {
-      choices:[],
-        name: 'name',
-        message: 'What is your name?',
-      },
-    {
-      type: 'input',
-      name: 'name',
-      message: 'What is your name?',
-    },
-    {
-      type: 'input',
-      name: 'job',
-      message: 'Why did you build this project?',
-    },
-    {
-      type: 'input',
-      name: 'email',
-      message: 'What problem does it solve?',
-    },
-//     {
-//       type: 'input',
-//       name: 'learn',
-//       message: 'What did you learn?',
-//     },
-//     {
-//       type: 'input',
-//       name: 'installation',
-//       message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
-//     },
-//     {
-//       type: 'input',
-//       name: 'usage',
-//       message: 'Provide instructions and examples for use. Include screenshots as needed.',
-//     },
-//     {
-//         type: 'input',
-//         name: 'screeshot1',
-//         message: 'To add a screenshot, create an assets/screenshots folder. Then follow this syntax  ![alt text](assets/images/screenshot.png)'
-//     },
-//     {
-//         type: 'input',
-//         name: 'collaborators',
-//         message: 'List your collaborators, if any, with links to their GitHub profiles.'
-//     },
-//     {
-//         type: 'input',
-//         name: 'thirdparty',
-//         message: 'If you used any third-party assets that require attribution please list them here.'
-//     },
-//     {
-//         type: 'input',
-//         name: 'license',
-//         message: 'If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).'
-//     },
-//     {
-//       type: 'input',
-//       name: 'badges',
-//       message: 'If you have any badges assign them here.'
-//   },
-//   // {
-//   //     type: 'input',
-//   //     name: 'test',
-//   //     message: 'Instructions on how to test it'
-//   // },
-//   {
-//       type: 'input',
-//       name: 'github',
-//       message: 'Please Enter your Github username for any questions someone may have.'
-//   },
-//   {
-//     type: 'input',
-//     name: 'email',
-//     message: 'Please enter your Email for any questions someone may have'
-// },
+        type: 'list',
+      choices:[
+        'Adding a new member',"changing role","New role"
+      ],
+        message: 'What is will you be doing?',
+      }.then(
+        
+      )
   ])
   .then((answers) => {
     const htmlPageContent = generate(answers);
