@@ -142,9 +142,11 @@ inquirer
   .prompt([
     {
         type: 'list',
-      choices:[
-        'Adding a new member',"changing role","New role"
-      ],
+      choices:function(){
+        var questions = ['Make a new employee', 'Change an employees title']
+        
+        
+      },
         message: 'What is will you be doing?',
       }.then(
         
