@@ -1,10 +1,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const Char = require('./lib/Manager');
+const Manager = require('./lib/Manager');
 
 
-const generate = ({name,job,email}) =>
+const generate = ({name,job,email, github}) =>
   `<!DOCTYPE html>     
   <html>
   <head>
@@ -143,7 +143,7 @@ inquirer
     {
         type: 'list',
       choices:function(){
-        var questions = ['Make a new employee', 'Change an employees title']
+        var questions = ['Make a new employee', 'Change an employeAes title']
         
         
       },
